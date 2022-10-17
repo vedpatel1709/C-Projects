@@ -1,0 +1,33 @@
+/*
+    ==================================================
+    Workshop #5 (Part-2):
+    ==================================================
+    Name   :Patel Ved Rajendrakumar
+    ID     :149409203
+    Email  :vrpatel33@myseneca.ca
+    Section:IPC144 NDD
+*/
+1. Describe the benefits and advantages of using user - defined types(structures) in this workshop.
+You must explain your answer using an example from this workshop.
+
+- Main benefits of using structures in this workshop is that structures can hold multiple data-types. We do not need to redefine data types.
+  For example, i have used two structs to store the information of player and information of game.
+  In both structs i have defined multiple data types of integers and characters. 
+
+
+2. If we enhanced this workshop to keep a history of games played including the endgame results,
+briefly describe what two major logical changes you would have to make to your program to make
+this possible ?
+
+- I will create one more struct that will store the values of results .
+ To store the values in struct i will create arrays in it.
+ and i will place that arrays at the end of the loop that will store result of everygame.  
+
+
+3. What part of this workshop did you spend the most time working on ? What did you do to
+overcome your difficulties ?
+
+- I have spent around 5 to 6 hours to complete this workshop. Among them i have spent my most of the time in arrays.
+  Because of i have created morethan 20 loops i get confuced everytime while placing arrays to store and print values.
+  To overcome this problem i used 'comment' technique . Using comment I wrote details of loop at the end of the loop.
+  That helped me a lot.  

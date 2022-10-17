@@ -1,0 +1,3 @@
+﻿  w1p1.c
+C:\Users\asus\source\repos\workshop1\w1p1.c(7,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  workshop1.vcxproj -> C:\Users\asus\source\repos\workshop1\Debug\workshop1.exe

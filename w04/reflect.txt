@@ -1,0 +1,38 @@
+/*
+	==================================================
+	Workshop #4 (Part-2):
+	==================================================
+	Name   :Patel Ved Rajendrakumar
+	ID     :149409203
+	Email  :vrpatel33@myseneca.ca
+	Section:IPC144 NDD
+*/
+1. Parallel arrays provide us the ability to group related data. Using what you coded in this 
+workshop, briefly explain how you linked related data for any given item in the dataset? What 
+was the ‘key’ used to accomplish this?
+
+- I have used arrays to store values of same data type in this workshop. To get the expected values i iterate the arrays.
+  after iteration i scored values using "scanf" and using "printf" i displayed all the collected values of arreys.
+
+
+2. Why do you think it is common practice to iterate arrays initializing the iterator variable to zero 
+and not to a value of one? Justify your answer using an example from this workshop.
+
+- It is good practice to iterate arrays initializing the iterator variable to zero rather than one because
+ first element of array can be declared only with value of array[i=0].
+ for example , array[3]={a,b,c,d}     (using i=0, we will receive a b c d) 
+               for (i=0;i<3;i++){
+			   printf("%c",i)};
+ if we use i=1
+             array[3]={a,b,c,d}   ( using i=1 , we will receive b c d) 
+	         for (i=1;i<3;i++){     (we will not recceive value of element 1)
+              printf("%c",i)};
+
+3. How would you describe conceptually what an array is to a child (5-8-year-old)? How would you 
+describe accessing an element in the array? Warning: keep your explanation simple or the child 
+will not understand.
+
+- i would describe array is useful to store multiple values at the sametime. elements in array starts with 
+  0, hence we can access element 1 using array 0, we can access element 2 using array 1 and so on.
+  for example array[0]=element 1
+              array[1]=element 2

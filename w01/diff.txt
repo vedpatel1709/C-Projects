@@ -1,0 +1,14 @@
+In line number 4 of your output:
+The output should be:
+Program written by:
+                  ^
+But your output is: 
+Program written by
+                  ^
+
+Unmatched character details:
+The character in column 19 is supposed to be:
+  [:] ASCII code(58)
+but you printed
+  [Empty Line] ASCII code(0)
+

@@ -1,0 +1,20 @@
+   This assignment was really confusing to me. 
+But using weekly reading and re-watching lectures really helped me. 
+While doing first two milestone I learned how to use .h and .c file. 
+Using this we can divide our work into small parts.
+ 
+ 
+   To work more efficiently I learned functions. Functions are really helpful.
+ Functions can save our time because we do not need to define a new function every time.
+ For example, in this assignment I had declared “findContactIndex” and “getTenDigitPhone” in the beginning.
+ Whenever I need to get number from user, I simply call “getTenDigitPhone”. 
+ And whenever I want to find contact index, I simply call “findContactIndex”. 
+ This two functions saved my time and efforts. 
+
+
+  Yes, I would like to add a functionality to load/save the contact information from/to text file.
+This functionality will improve the efficiently of this code. After adding this function, 
+we do not need to save contacts one by one. That will save user’s time.
+
+
+  Overall, this assignment improved my learning because I corrected almost 200 errors in this assignment.  

@@ -1,0 +1,80 @@
+/*
+	==================================================
+	Workshop #6 (reflection):
+	==================================================
+	Name   :Patel ved Rajendrakumar
+	ID     : 149409203
+	Email  : vrpatel33@myseneca.ca
+	Section:IPC144 NDD
+*/
+
+
+1. Structures data types can demand a lot of memory (for example the "ReportData" structure). 
+Without digging into advanced memory management (for example padding), how many bytes 
+of memory would the "ReportData" structure require? How could we improve the passing of 
+this information to functions? Use the function "displayReportData" from this workshop in 
+your explanation.
+
+----> 
+structures data types requires a lot of memory. "ReportData" structure has 9 members. 3 members are int and 6 are double.
+integer data-type will take around 12 (3*4 bytes)bytes and double data-type will take 48(6*8 bytes)bytes and total required memory for "ReportData" structure will be 60 bytes.
+we can pass the information to function by it's value and by it's address. We can use pass by it's address to improve the passing of information to function.
+For example:
+struct ReportData
+{
+	int SKU_ID;
+	double PRO_price;
+	int calories;
+	double LBS;
+	double KG;
+	int GRAMS;
+	double TotalServing;
+	double costserv;
+	double costcalperserv;
+};
+void displayReportData(const struct ReportData info, const int cheap)
+{
+	printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf",
+		info.SKU_ID, info.PRO_price, info.LBS, info.KG, info.GRAMS,
+		info.calories, info.TotalServing, info.costserv,
+		info.costcalperserv);
+}
+- In "ReportData", we have used struct to declare int and double variable. While passing the information, we used dot(.) to pass the information by it's address.
+ This process will consume less memory. This is how we can improve the passing of information to function.
+
+
+
+2. The CatFoodInfo structure and the ReportData structure contain common members. How 
+could the "ReportData" structure be improved? Show the new and improved "ReportData" 
+structure with your changes, then show how you would modify your code in the function 
+"displayReportData". Specifically, show how you would need to modify the printf statement 
+that displays the data.
+
+----->
+The CatFoodInfo structure and the ReportData structure contain many common members like calories, sku , product price.
+To improve "ReportData" structure,i will use nested structure to avoid writing the same members.
+I will move catFoodInfo structure into ReportData structure. Using nested structures we can avoid rewrite and it will consume less memory.
+After changes "displayReportData" function will look like this:
+
+struct ReportData
+{
+struct catFoodInfo info [];
+int SKU_ID;
+	double PRO_price;
+	int calories;
+	double LBS;
+	double KG;
+	int GRAMS;
+	double TotalServing;
+	double costserv;
+	double costcalperserv;
+	}
+
+	and printf function will look like this :
+	void displayReportData(const struct ReportData info, const int cheap)
+{
+	printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf",
+		info[i].data[i]SKU_ID, info[i].data[i].PRO_price, info[i].data[i].LBS, info[i].data[i].KG, info[i].data[i].GRAMS,
+		info[i].data[i].calories, info[i].data[i].TotalServing, info[i]data[i].costserv,
+		info[i].data[i].costcalperserv);
+}

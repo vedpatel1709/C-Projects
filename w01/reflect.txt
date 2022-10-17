@@ -1,0 +1,16 @@
+* name : ved rajendrakumar patel
+* email: vrpatel33@myseneca.ca
+* student no:149409203
+* section information code :IPC144 NDD 
+
+1. What you have learned in completing this workshop
+-  While completing this workshop i have learned how C program works.i have understood printf function.
+   i have learned without header file our code can not run . And mainly i did learn we have to put semicolon after every sentences.
+
+2. Briefly describe what SSH is and how you used it in this workshop
+-  SSh is a network protocol that will allow to connect two system . I have used SSH to connect my PC with seneca's matrix server.
+   I used seneca's student VPN to connect it.  
+
+3. Briefly describe what SFTP is and how you used it in this workshop
+-  SFTP is a protocol that can transfer files from client to client server. SFTP will transfer files securely.
+   I used this to submit  w1p1.c and w1p2.c from my drive to seneca's matrix server. 

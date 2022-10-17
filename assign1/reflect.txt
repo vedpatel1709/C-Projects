@@ -1,0 +1,61 @@
+1. For each of the bugs you corrected in the code, write the original code and the corrected code 
+and then explain what was wrong and how you corrected it.
+
+- 1) First bug which I corrected was in scanf function (line number 31 in contacts.c).
+     The original code was 'scanf("%s%*c",&yesNo)'. I wrote 'scanf("%c%*c,&yesNo")'.
+     In this part I wrote %c instead of %s because we were storing only one character.
+     Hence, we do not need to use string just to store one character. 
+
+  2) Second bug which I corrected was in if condition (line number 88 in contact.c).
+     The condition was 'if (yesNo == 'y' && yesNo == 'Y')'. and the corrected condition is 'if (yesNo == 'y' || yesNo == 'Y')'.
+     the condition was wrong because character stored in yesNo cannot be 'y' and 'Y' at the same time.
+     But it can be 'y' or 'Y' at the same time. So, I wrote || instead of && in the code.  
+
+  3) Third bug which I corrected was in struct name (line number 15 in contacts.h).
+      The original code was 'char middleInitial[5]' . and the corrected code is 'char middleInitial[6]'.
+      I changed size of middleInitial 5 to 6 because we are storing 6 characters (including null character '/0').
+      So, if we have to store 5 characters then we need to change size of string to morethan 5 because of null character. 
+
+
+2. The Contact struct contains other structs embedded within it. Explain how this looks when the 
+data is laid out in memory.
+
+- The struct that contain other structs are called nested structure. 
+  We can use nested structure because we can declare every single member of struct.
+  we can declare member using dot ('.'). we can use this dot to reach the location of multiple members inside the struct.
+  And we can make one struct that hold the multiple structs and multiple structs will hold multiple members and members will hold the values. 
+  This is how it looks when the data is laid out in memory.
+  for example, in workshop 5 I created one common struct and in this struct I had created playerinfo struct and gameinfo struct,
+  inside these structs I had declared the values of different members. 
+
+
+3. The code in contacts.c contains some repetition of the same code several times. Can you 
+identify the repeated code and design a function to replace it? Show the prototype for the 
+function you designed and explain its purpose, the parameters it requires and what it will 
+return.
+
+-  Yes, there is some repetition of the same code several time.
+  Repeated code is "void getName(struct Name *name)", "void getAddress(struct Address* address)" and "void getNumbers(struct Numbers* numbers)".
+  We can use "void getNameAddressNumber(struct *name, struct *address, struct *numbers)".
+  This one function will work exact same as those three functions.
+  While using this function it will require to pass the address to getNameAddressNumbers.
+  this function will not return any value because of "void".
+
+
+4. There are several places in the code where the scanf format strings end with “%*c”. Explain 
+what this does and why it needs to be there.
+
+-" %*c" in scanf function means read the value but do not assign the new line to next statement.
+ In the scanf function we do not need to add "\n" because scanf function automatically adds new line to new statement.
+ But when we do not need newline to new statement we simply use "%*c". when we do not use "%*c", it will assign newline to new statement.
+ In this code, we do not want newline after scanf function this is why we have added "%*c" in several places.
+
+
+5. Most of the strings are read with the format code “%[^\n]”. Explain why this is used and why 
+“%s” cannot be used in these situations
+
+- Most of the strings are read with format code "%[\n]" instead of "%s" because %s will only read characters until spaces.
+  But "%[^\n]" can read the characters after the spaces.
+  For example, if there is space between two words and you used "%s", it will only read first word.
+  "%[^\n]" works differently .For example, "%15[^\n]" will read exact 15 characters.
+  This is why %[^\n] is used in most of strings.

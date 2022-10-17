@@ -1,0 +1,14 @@
+In line number 12 of your output:
+The output should be:
+Please enter the contact's postal code: Z8Z 7R7
+                                         ^
+But your output is: 
+Please enter the contact's postal code: ZRZ 7R7
+                                         ^
+
+Unmatched character details:
+The character in column 42 is supposed to be:
+  [8] ASCII code(56)
+but you printed
+  [R] ASCII code(82)
+

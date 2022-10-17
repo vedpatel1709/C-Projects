@@ -1,0 +1,52 @@
+/*
+	==================================================
+	Workshop #3 (Part-2):
+	==================================================
+	Name   : Patel Ved Rajendrakumar
+	ID     :149409203
+	Email  :vrpatel33@myseneca.ca
+	Section:IPC144 NDD
+*/
+
+1. Mapping the month integer value to the first three characters of the month name could have 
+been accomplished using one of two possible selection constructs. What are they, and provide 
+a short example of how each would be written in C to display the first two months? 
+
+- There are two possible selection constructs which we can use to display first three characters
+   of month name from month integer value.
+   int month;
+  1st is If-else :
+   if (month = 1)
+   {
+   printf("JAN");
+   } 
+
+   else if (month = 2)
+   {
+   printf("FAB");
+   }
+
+ 2nd is switch-case statement:
+  switch(month){
+  case 1: printf("JAN");
+  break;
+  case 2: printf("FAB");
+  break;
+  }
+
+2. The logic applied to validate the values entered by the user required iteration. What are the 3 
+types of iteration constructs? What one did you use for the validation routines, and briefly 
+explain why?
+
+- There are 3 types of iteration constructs . First is for loop , second is do-while loop ,and third is while loop.
+  i used do-while loop because we need to exacute "printf and scanf" atleast one time ,but for loop and while loop 
+  will varify condition first after varifing it will exacute statement . And this is why do-while loop works better
+  there and i used it do-while loop.
+
+3. Describe what you did to test and debug your program. How did you go about finding where 
+the problems were located?
+
+-I used debugger to find my error . while coding i wrote printf and scanf function to get value from user but when i 
+run the program compiler was just printing a statement instead of asking me value , then i used debuging processing and 
+that showed my error was in scanf line . i mistakely wrote %.2lf insted of %lf in scanf . that is how debug program help me 
+to correct my mistake.

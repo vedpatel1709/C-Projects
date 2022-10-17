@@ -1,0 +1,14 @@
+In line number 5 of your output:
+The output should be:
+Service fee (5.0 percent): 0.50
+                          ^
+But your output is: 
+Service fee (5.0 percent):0.50
+                          ^
+
+Unmatched character details:
+The character in column 27 is supposed to be:
+  [Space] ASCII code(32)
+but you printed
+  [0] ASCII code(48)
+

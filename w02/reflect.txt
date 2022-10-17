@@ -1,0 +1,42 @@
+1. Given the following C statements:
+printf("10.10 = %.15lf\n", 10.10);
+printf("10.12 = %.15lf\n", 10.12);
+printf("10.15 = %.15lf\n", 10.15);
+Briefly explain why 10.12 doesn't display the value expected?
+
+- it does not show expected value because 10.12 is rounded value from 10.199999... .
+  and in printf function it has been mantioned to take value up to 15 decimal.
+  while in 10.10 and 10.15 values are not rounded from any number.
+
+
+
+2. What are all the possible values that can be returned based on the following statements using 
+the modulus operator (you many use a range to simplify your answer
+a) intValue % 2
+-  0,1,0,1,0,1,0,1,...
+
+b) intValue % 3
+-  0,1,2,0,1,2,0,1,2,...
+
+c) intValue % 100
+-  0,1,2,3,4,5,6,...,98,99,0,1,2,3,..
+
+
+
+3. Apply the modulus operator in the following situation:
+You are hosting a party and you order 11 pizzas. Each pizza has 12 slices, and the average 
+person eats 3 slices, and you expect 21 people at the party. How many pizza's will be 
+completely consumed and how many extra slices will be needed to feed the expected number 
+of guests? What does the formula look like if you write it in the C language? Fill-in the missing 
+parts (underscored):
+int totalSlices = 11 * 12;
+int estimatedSlicesConsumed = 21 * 3;
+int wholePizzasEaten = 63 / 12  ;
+int extraSlicesNeeded = 63 % 12 ;
+
+
+
+4. Briefly explain why it is often a best practice to convert floating-point values to integers when 
+performing arithmetic operations?
+-  Modules (%) is one of the best arithmatic operator which can easily solve problems . but it only supports to  integer 
+this is why while performing arithmatic operation we convert floating-point values to integers. 
